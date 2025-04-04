@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const fotos = document.querySelector(".slider .fotos");
     const prevButton = document.querySelector(".slider .prev");
     const nextButton = document.querySelector(".slider .next");
-console.log("aq")
+
     const imagens = [
         "./img/carniceriafoto2.jpg",
         "./img/carniceriafoto3.jpg",
@@ -33,19 +33,19 @@ console.log("aq")
     }
 
     function goNext() {
-        // Aumentar o índice para a próxima imagem
+
         currentIndex++;
         if (currentIndex > images.length - imagesPerPage) {
-            currentIndex = 0; // Volta para a primeira imagem
+            currentIndex = 0; 
         }
         updateSlider();
     }
 
     function goPrev() {
-        // Diminuir o índice para a imagem anterior
+      
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = images.length - imagesPerPage; // Volta para a última imagem
+            currentIndex = images.length - imagesPerPage; 
         }
         updateSlider();
     }
