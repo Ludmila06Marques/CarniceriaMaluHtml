@@ -1,6 +1,6 @@
 # Carnicería Malu - Página Web
 
-<img src="./img/LogoMalu.png" alt="Logo Carnicería Malu" style="max-width: 300px; width: 100%; height: auto;">
+<img src="./img/LogoMalu.png" alt="Logo Carnicería Malu" width="200">
 
 
 Bienvenido al repositorio de la página web de **Carnicería Malu**, donde ofrecemos productos frescos de alta calidad, una experiencia única para nuestros clientes y mucho más.
