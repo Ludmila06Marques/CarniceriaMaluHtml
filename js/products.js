@@ -86,10 +86,10 @@ function getItemsPerPage() {
     const width = window.innerWidth;
 
     if (width <= 768) {
-        return 3; // mobile
+        return 3; 
     } else if (width <= 992) {
-        return 9; // tablet
+        return 9;
     } else {
-        return 10; // desktop
+        return 10; 
     }
 }

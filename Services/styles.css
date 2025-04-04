@@ -1,7 +1,7 @@
-.servicios-grid {
 
+.servicios-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 40px 20px;
     max-width: 1200px;
@@ -16,8 +16,10 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
-.servicio  a{
-   text-decoration: none;
+
+.servicio a {
+    text-decoration: none;
+    color: inherit; 
 }
 
 .servicio:hover {
@@ -27,11 +29,10 @@
 .icon {
     font-size: 36px;
     margin-bottom: 15px;
-    color: #c62828; /* Vermelho da paleta */
+    color: #c62828;
 }
 
 .servicio h3 {
- 
     color: #333;
     margin-bottom: 10px;
 }
@@ -41,7 +42,6 @@
     line-height: 1.5;
 }
 
-
 .roleta-container {
     text-align: center;
     padding: 20px;
@@ -50,6 +50,7 @@
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 400px;
+    margin: 0 auto;
 }
 
 .email-container {
@@ -76,14 +77,14 @@
     text-align: center;
 }
 
-
-
 #prize {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
     color: #e74c3c;
 }
+
+/* Responsividad */
 @media (max-width: 900px) {
     .servicios-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -94,5 +95,14 @@
 @media (max-width: 600px) {
     .servicios-grid {
         grid-template-columns: 1fr;
+    }
+
+    .roleta-container {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .roleta-item {
+        width: 45%; 
     }
 }

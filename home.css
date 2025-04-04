@@ -1,12 +1,9 @@
-
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 
 .discount-bubble {
     margin-top: 15px;
@@ -47,7 +44,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,14 +61,13 @@
     text-align: center;
     width: 80%;
     max-width: 500px;
- 
 }
 
 .popup-content h2 {
     margin-bottom: 20px;
 }
 
-.popup-content  button {
+.popup-content button {
     width: 100px;
     height: 40px;
     background-color: #c62828;
@@ -80,7 +76,6 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
 
 #spinButton {
     background-color: #c62828;
@@ -103,11 +98,10 @@
     border: 5px solid #c62828;
     overflow: hidden;
     margin: 20px auto;
-    transition: transform 3s ease-out; 
-    pointer-events: auto; 
-    background: linear-gradient(135deg, #ff6b6b, #f06595, #fc8f19); 
+    transition: transform 3s ease-out;
+    pointer-events: auto;
+    background: linear-gradient(135deg, #ff6b6b, #f06595, #fc8f19);
 }
-
 
 .roleta-item {
     position: absolute;
@@ -127,18 +121,16 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-
 .roleta-item:hover {
-    background-color: #ff6b6b; 
-    color: white; 
-    transform: scale(1.1); 
+    background-color: #ff6b6b;
+    color: white;
+    transform: scale(1.1);
 }
 
-
 .roleta-item:nth-child(1) {
-    background-color: #ff6b6b; 
+    background-color: #ff6b6b;
     color: #fff;
-    transform: rotate(0deg) translate(90px) rotate(0deg); 
+    transform: rotate(0deg) translate(90px) rotate(0deg);
 }
 .roleta-item:nth-child(2) {
     background-color: #f06595;
@@ -146,32 +138,33 @@
     transform: rotate(72deg) translate(90px) rotate(-72deg);
 }
 .roleta-item:nth-child(3) {
-    background-color: #fc8f19; 
+    background-color: #fc8f19;
     color: #fff;
     transform: rotate(144deg) translate(90px) rotate(-144deg);
 }
 .roleta-item:nth-child(4) {
-    background-color: #ffeb3b; 
+    background-color: #ffeb3b;
     color: #333;
-    transform: rotate(216deg) translate(90px) rotate(-216deg); 
+    transform: rotate(216deg) translate(90px) rotate(-216deg);
 }
 .roleta-item:nth-child(5) {
-    background-color: #4caf50; 
+    background-color: #4caf50;
     color: #fff;
     transform: rotate(288deg) translate(90px) rotate(-288deg);
 }
 
-
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
-
 
 #spinButton:hover {
     background-color: #d32f2f;
 }
-
 
 #prize {
     margin-top: 20px;
@@ -180,7 +173,6 @@
     color: #c62828;
     display: none;
 }
-
 
 #spinButton:active {
     transform: scale(0.95);
@@ -205,7 +197,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .email-container button {
@@ -236,51 +228,23 @@
     margin-top: 20px;
 }
 
-
 #submitEmail {
     margin-top: 15px;
 }
 
-
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
 
 #emailStatus {
     animation: fadeIn 0.5s ease-in-out;
-}/* Botão de menu no mobile */
-/* .menu-toggle {
-    position: fixed;
-    top: 15px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-} */
+}
 
-
-
-/* Responsividad */
-
-/* Ocultar o botão de menu no desktop */
-/* .menu-toggle {
-    display: none;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-} */
-
-
-
-/* Botão para fechar o menu */
 .close-menu {
     position: absolute;
     top: 15px;
@@ -292,22 +256,19 @@
     color: white;
 }
 
-
-/* Slider */
 .slider {
     position: relative;
     width: 100%;
     overflow: hidden;
-    white-space: nowrap; /* Impede quebra de linha */
+    white-space: nowrap;
 }
 
 .slider .fotos {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    gap: 20px; 
+    gap: 20px;
     box-sizing: border-box;
-    padding: 0 10px; 
-    
+    padding: 0 10px;
 }
 
 .slider img {
@@ -315,7 +276,6 @@
     max-height: 250px;
     object-fit: cover;
 }
-
 
 .slider button {
     position: absolute;
@@ -346,21 +306,20 @@
     .slider .fotos {
         display: flex;
         transition: transform 0.5s ease-in-out;
-        gap: 10px; 
-     
+        gap: 10px;
     }
-    .discount-bubble{
+
+    .discount-bubble {
         margin-top: 0px;
         z-index: 5;
     }
- 
+
     .slider img {
-        width: calc(50% - 10px); 
-        height: auto; 
-      
+        width: calc(50% - 10px);
+        height: auto;
     }
-    .slider{
+
+    .slider {
         margin-bottom: 40px;
     }
 }
-

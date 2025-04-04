@@ -1,27 +1,24 @@
-
 html, body {
-    height: 100%; 
-    margin: 0; 
-    padding: 0; 
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
 
 body {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(to bottom, #e0e0e0, #FFCDD2); 
+    background: linear-gradient(to bottom, #e0e0e0, #FFCDD2);
     background-attachment: fixed;
     background-color: #f4f4f4;
-    background-size: cover;  
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
 }
 
-/* Fuentes principales */
 h1 {
     font-family: 'Slabo 27px', serif;
     font-size: 40px;
-    color: #d32f2f; 
+    color: #d32f2f;
 }
 
 h2 {
@@ -35,28 +32,30 @@ h3 {
     font-size: 26px;
     color: #333;
 }
+
 h4 {
     font-family: 'Lora', serif;
     font-size: 20px;
     color: #333;
 }
+
 p {
     font-family: 'Lora', serif;
     font-size: 16px;
     color: #666;
 }
+
 span {
     font-family: 'Lora', serif;
     font-size: 24px;
     color: white;
 }
-a{
-font-weight: bold;
+
+a {
+    font-weight: bold;
 }
 
-/* Estilo del Header */
 header {
-    /* padding: 0px 50px 0px 50px; */
     background-color: #FFCDD2;
     margin-bottom: 16px;
 }
@@ -69,7 +68,7 @@ header nav ul {
 }
 
 header nav li {
-    margin-right: 16px; /* Separación mínima de 8px entre los elementos */
+    margin-right: 16px;
 }
 
 header nav li img {
@@ -94,17 +93,17 @@ header nav a {
 header nav a:hover {
     color: #d32f2f;
 }
+
 section {
- 
     padding: 32px 16px;
     color: #333;
     text-align: center;
 }
+
 section h1 {
     margin-bottom: 16px;
 }
 
-/* Asegurarse de que los botones sean suficientemente grandes */
 button, .social i {
     min-width: 48px;
     min-height: 48px;
@@ -131,23 +130,24 @@ footer .social {
 
 footer .social i {
     font-size: 32px;
-    line-height: 1; 
-    display: inline-flex; 
+    line-height: 1;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
 footer .social i:hover {
-    color: #e53935; 
+    color: #e53935;
     transform: scale(1.1);
 }
+
 footer .address {
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
-
 }
 
 footer .address p {
@@ -156,13 +156,14 @@ footer .address p {
 }
 
 strong {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-#menuToggle :hover {
+#menuToggle:hover {
     background-color: #d32f2f;
 }
- #menuToggle {
+
+#menuToggle {
     margin-left: 10px;
     background-color: #c62828;
     color: white;
@@ -170,14 +171,14 @@ strong {
     border-radius: 5px;
     cursor: pointer;
 }
-/* Menu lateral */
+
 .mobile-menu {
     position: fixed;
     top: 0;
     left: -250px;
     width: 250px;
     height: 100%;
-    background: #D32F2F;
+    background: #C62828;
     color: white;
     display: flex;
     flex-direction: column;
@@ -185,7 +186,6 @@ strong {
     transition: left 0.3s ease-in-out;
 }
 
-/* Links dentro do menu */
 .mobile-menu nav ul {
     list-style: none;
     padding: 0;
@@ -218,75 +218,44 @@ strong {
     color: white;
 }
 
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: #C62828;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    transition: left 0.3s ease-in-out;
-}
-
-/* Links dentro do menu */
-.mobile-menu nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.mobile-menu nav ul li {
-    padding: 15px;
-    text-align: center;
-}
-
-.mobile-menu nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-}
-
-.mobile-menu nav ul li a:hover {
-    background: #C62828;
-}
-
 .mobile-menu.open {
     left: 0;
 }
 
-.mobile-menu.open {
-    left: 0;
-}
-#mobile{
+#mobile {
     display: none;
- }
-/* Responsividade */
+}
+
 @media (max-width: 768px) {
-     #desktop{
+    #desktop {
         display: none;
-     }
-     .menuToggle{
-        display: block;
-     }
-     #mobileMenu{
-     z-index: 99999;
-     }
-     #mobile{
-        display: block;
-  
-     }
-     h1{
-        font-size: 25px;
     }
-    h3 label{
+
+    #menuToggle {
+        display: block;
+        height: 48px;
+    }
+
+    #mobileMenu {
+        z-index: 99999;
+    }
+
+    #mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3 label {
         font-size: 20px;
     }
-    footer{
-    
+
+    footer {
         position: fixed;
         bottom: 0;
         width: 100%;

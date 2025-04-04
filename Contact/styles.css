@@ -3,7 +3,6 @@
     padding: 50px 20px;
 
 }
-
 .contacto-container {
     display: flex;
     flex-wrap: wrap;
@@ -63,9 +62,12 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Responsivo para telas menores */
+/* Responsividad */
 @media (max-width: 900px) {
     .contacto-container {
         flex-direction: column;
+    }
+    .contacto-mapa {
+       margin-bottom: 100px;
     }
 }
