@@ -1,0 +1,112 @@
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicio {
+    background-color: #f4f4f4;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.servicio  a{
+   text-decoration: none;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #c62828; /* Vermelho da paleta */
+}
+
+.servicio h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsivo: em telas menores, 1 ou 2 colunas */
+@media (max-width: 900px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.roleta-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.email-container {
+    margin-bottom: 20px;
+}
+
+.roleta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.roleta-item {
+    width: 30%;
+    padding: 20px;
+    background-color: #f0ad4e;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #c62828;
+    color: white;
+    padding: 14px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+#prize {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+}

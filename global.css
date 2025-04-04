@@ -1,0 +1,124 @@
+/* Fuentes */
+body {
+ 
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+
+    background-color: #f4f4f4;
+}
+
+/* Fuentes principales */
+h1 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 42px;
+    color: #d32f2f; /* Rojo principal de la paleta */
+}
+
+h2 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 32px;
+    color: #333;
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: #333;
+}
+
+p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #666;
+}
+a{
+font-weight: bold;
+}
+
+/* Estilo del Header */
+header {
+    background-color: #F9ECDA;
+    margin-bottom: 16px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header nav li {
+    margin-right: 16px; /* Separación mínima de 8px entre los elementos */
+}
+
+header nav li img {
+    height: 80px;
+}
+
+header nav li span {
+    font-family: 'Slabo 27px', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #d32f2f; /* Rojo de la paleta */
+}
+
+header nav a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #d32f2f;
+}
+section {
+    background: linear-gradient(to bottom,#e0e0e0, #FFCDD2); 
+    padding: 32px 16px;
+    color: #333;
+    text-align: center;
+}
+section h1 {
+    margin-bottom: 16px;
+}
+
+/* Asegurarse de que los botones sean suficientemente grandes */
+button, .social i {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+footer {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+footer .social i {
+    font-size: 32px;
+    line-height: 1; /* evita que o ícone estique verticalmente */
+    display: inline-flex; /* garante controle sobre altura/alinhamento */
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+footer .social i:hover {
+    color: #e53935; /* vermelho mais claro no hover */
+    transform: scale(1.1);
+}
+strong {
+    font-weight: bold; /* Garante que o texto dentro do <strong> fique em negrito */
+}

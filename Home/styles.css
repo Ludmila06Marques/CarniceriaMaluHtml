@@ -1,0 +1,305 @@
+
+
+/* Estilos para el Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.slider .fotos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    gap: 20px; /* Espaçamento entre as imagens */
+    box-sizing: border-box;
+    padding: 0 10px; /* Padding interno se quiser espaço nos lados */
+}
+.slider img {
+    width: calc(25% - 15px); /* Subtrai parte do gap para manter 4 por linha */
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider .prev {
+    left: 16px;
+}
+
+.slider .next {
+    right: 16px;
+}
+
+/* Fondo Gradiente en la Sección */
+/* Estilos para a bolinha pulsante */
+.discount-bubble {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #c62828;
+    color: white;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1.5s infinite; /* Efeito pulsante */
+    z-index: 9999;
+}
+
+.discount-bubble:hover {
+    background-color: #d32f2f;
+}
+
+/* Animação para pulsar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos para o popup */
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+}
+
+.popup-content button {
+
+    width: 100px;
+    height: 40px;
+    background-color: #c62828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #d32f2f;
+}
+
+#spinButton {
+    background-color: #c62828;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+/* Estilo da roleta */
+.roleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #c62828;
+    overflow: hidden;
+    margin: 20px auto;
+    transition: transform 3s ease-out; /* Transição para rotação suave */
+    pointer-events: auto; /* Para permitir interação enquanto gira */
+    background: linear-gradient(135deg, #ff6b6b, #f06595, #fc8f19); /* Gradiente colorido de fundo */
+}
+
+/* Itens da roleta */
+.roleta-item {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    color: #333;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito de hover para os itens da roleta */
+.roleta-item:hover {
+    background-color: #ff6b6b; /* Fica vermelho ao passar o mouse */
+    color: white; /* Texto em branco */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho do item */
+}
+
+/* Definindo cores vibrantes para cada item */
+.roleta-item:nth-child(1) {
+    background-color: #ff6b6b; /* Vermelho */
+    color: #fff;
+    transform: rotate(0deg) translate(90px) rotate(0deg); /* Posição inicial */
+}
+.roleta-item:nth-child(2) {
+    background-color: #f06595; /* Rosa */
+    color: #fff;
+    transform: rotate(72deg) translate(90px) rotate(-72deg); /* Posição 2 */
+}
+.roleta-item:nth-child(3) {
+    background-color: #fc8f19; /* Laranja */
+    color: #fff;
+    transform: rotate(144deg) translate(90px) rotate(-144deg); /* Posição 3 */
+}
+.roleta-item:nth-child(4) {
+    background-color: #ffeb3b; /* Amarelo */
+    color: #333;
+    transform: rotate(216deg) translate(90px) rotate(-216deg); /* Posição 4 */
+}
+.roleta-item:nth-child(5) {
+    background-color: #4caf50; /* Verde */
+    color: #fff;
+    transform: rotate(288deg) translate(90px) rotate(-288deg); /* Posição 5 */
+}
+
+/* Adicionando animações para quando a roleta gira */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#spinButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilo para o prêmio */
+#prize {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c62828;
+    display: none;
+}
+
+/* Efeito de pulsação para o botão */
+#spinButton:active {
+    transform: scale(0.95);
+}
+/* Formulário de E-mail */
+.email-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.email-container label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    /* display: block; */
+    color: #333;
+}
+
+.email-container input {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Faz com que o padding não afete a largura total */
+}
+
+.email-container button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.email-container button:hover {
+    background-color: #4cae4c;
+}
+
+.email-container p {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* Estilo para o status de já ter jogado */
+#emailStatus {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Ajustes para o botão de "Enviar" */
+#submitEmail {
+    margin-top: 15px;
+}
+
+/* Exemplo de animação para mostrar a resposta de erro */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Quando o status de erro aparecer, anima para aumentar a visibilidade */
+#emailStatus {
+    animation: fadeIn 0.5s ease-in-out;
+}

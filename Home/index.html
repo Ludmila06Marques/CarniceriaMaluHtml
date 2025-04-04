@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnicería Malu</title>
+    <link rel="stylesheet" href="../reset.css"> 
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="../global.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
+                <li><span>Carnicería Malu</span></li>
+                <li><a href="../Home/index.html">Inicio</a></li>
+                <li><a href="../AboutUs/aboutUs.html">Sobre Nosotros</a></li>
+                <li><a href="../Products/products.html">Productos</a></li>
+                <li><a href="../Services/services.html">Servicios</a></li>
+                <li><a href="../Contact/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+   
+    <section>
+        <h1> Bienvenidos a Carnicería Malu</h1>
+        
+        <!-- Bolinha pulsante no canto superior direito -->
+        <div id="discountBubble" class="discount-bubble">
+            <span>Conseguir Descuento</span>
+        </div>
+
+        <!-- Popup da roleta (inicialmente escondido) -->
+        <div id="roletaPopup" class="popup" style="display: none;">
+            <div class="popup-content">
+             
+                <h2>Ruleta de la suerte!</h2>
+                <button id="spinButton" style="display: none;">Girar!</button>
+                <!-- Formulário de e-mail dentro do popup -->
+                <div id="emailFormContainer" class="email-container">
+                    <label for="userEmail">Inserte su email para obtener el descuento:</label>
+                    <input type="email" id="userEmail" placeholder="Correo electrónico">
+                    <button id="submitEmail">Enviar</button>
+                    <p id="emailStatus" style="display: none; color: red;">Ya has jugado este mes. Vuelve el próximo mes.</p>
+                </div>
+
+                <!-- A roleta aparecerá somente após o e-mail ser enviado -->
+                <div class="roleta" style="display: none;">
+                    <div class="roleta-item" data-discount="2%">2%</div>
+                    <div class="roleta-item" data-discount="5%">5%</div>
+                    <div class="roleta-item" data-discount="7%">7%</div>
+                    <div class="roleta-item" data-discount="10%">10%</div>
+                    <div class="roleta-item" data-discount="15%">15%</div>
+                </div>
+               
+                <p id="prize" style="display: none;"></p>
+                <button id="closePopup">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="slider">
+            <button class="prev">&lt;</button>
+            <div class="fotos">
+                <img src="../img/carniceriafoto2.jpg" alt="Foto 2">
+                <img src="../img/carniceriafoto3.jpg" alt="Foto 3">
+                <img src="../img/carniceriafoto4.jpg" alt="Foto 4">
+                <img src="../img/carniceriafoto5.jpg" alt="Foto 5">
+                <img src="../img/carniceriafoto6.jpg" alt="Foto 6">
+                <img src="../img/carniceriafoto7.jpg" alt="Foto 7">
+                <img src="../img/carniceriafoto8.jpg" alt="Foto 8">
+                <img src="../img/carniceriafoto9.jpg" alt="Foto 9">
+            </div>
+            <button class="next">&gt;</button>
+        </div>
+        
+     
+    </section>
+
+    <footer>
+        <div class="social">
+            <a href="https://wa.me/34651374252" target="_blank" aria-label="Enviar mensaje por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/carniceriamalu/" target="_blank" aria-label="Ver perfil en Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="tel:+34651374252" aria-label="Llamar por teléfono">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="../js/emailService.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+</html>
