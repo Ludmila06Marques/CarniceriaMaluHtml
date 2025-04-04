@@ -1,69 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
     const fotos = document.querySelector(".slider .fotos");
+    const images = Array.from(fotos.querySelectorAll("img"));
     const prevButton = document.querySelector(".slider .prev");
     const nextButton = document.querySelector(".slider .next");
 
-    const imagens = [
-        "./img/carniceriafoto2.jpg",
-        "./img/carniceriafoto3.jpg",
-        "./img/carniceriafoto4.jpg",
-        "./img/carniceriafoto5.jpg",
-        "./img/carniceriafoto6.jpg",
-        "./img/carniceriafoto7.jpg",
-        "./img/carniceriafoto8.jpg",
-        "./img/carniceriafoto9.jpg"
-    ];
-
-    // Injetar imagens no slider
-    imagens.forEach((src, index) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = `Foto ${index + 2}`;
-        fotos.appendChild(img);
-    });
-
-    const images = Array.from(fotos.querySelectorAll("img"));
     let imagesPerPage = window.innerWidth <= 768 ? 2 : 7;
+    let totalImages = images.length;
     let currentIndex = 0;
 
     function updateSlider() {
-        const imageWidth = images[0].offsetWidth + 10;
+        const imageWidth = images[0].clientWidth + 10; // Considera espaçamento (gap)
         const offset = currentIndex * imageWidth;
         fotos.style.transform = `translateX(-${offset}px)`;
     }
 
-    function goNext() {
-
-        currentIndex++;
-        if (currentIndex > images.length - imagesPerPage) {
-            currentIndex = 0; 
-        }
-        updateSlider();
+    function checkButtons() {
+        prevButton.style.display = currentIndex === 0 ? "none" : "block";
+        nextButton.style.display = currentIndex >= totalImages - imagesPerPage ? "none" : "block";
     }
 
-    function goPrev() {
-      
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = images.length - imagesPerPage; 
+    nextButton.addEventListener("click", () => {
+        if (currentIndex < totalImages - imagesPerPage) {
+            currentIndex++;
+            updateSlider();
+            checkButtons();
         }
-        updateSlider();
-    }
+    });
 
-    nextButton.addEventListener("click", goNext);
-    prevButton.addEventListener("click", goPrev);
+    prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+            checkButtons();
+        }
+    });
 
     window.addEventListener("resize", () => {
         imagesPerPage = window.innerWidth <= 768 ? 2 : 4;
         updateSlider();
+        checkButtons();
     });
 
     updateSlider();
+    checkButtons();
 });
-
-
-
-
 
 
 document.getElementById("discountBubble").addEventListener("click", function() {

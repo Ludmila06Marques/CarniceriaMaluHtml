@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
     const closeMenu = document.getElementById("closeMenu");
-console.log("oi")
+
     menuToggle.addEventListener("click", function () {
         mobileMenu.classList.add("open");
     });
