@@ -1,13 +1,7 @@
+
 .contacto-section {
     padding: 50px 20px;
-    background-color: #f4f4f4;
-}
 
-.contacto-section h1 {
-    text-align: center;
-    color: #c62828;
-    margin-bottom: 40px;
-    font-size: 32px;
 }
 
 .contacto-container {
@@ -64,7 +58,6 @@
 
 .contacto-mapa {
     flex: 1;
-    min-height: 400px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);

@@ -16,7 +16,7 @@ document.getElementById('submitEmail').addEventListener('click', function() {
 
 
     if (!email) {
-        alert("Por favor, insira seu e-mail para jogar!");
+        alert("Por favor, inserte un correo electronico");
         return;
     }
 

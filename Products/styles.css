@@ -1,20 +1,106 @@
+/* Estilo do container do slider */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do slider */
+.slider {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha quando necessário */
+    transition: transform 0.5s ease;
+    gap: 10px; /* Espaçamento entre os itens */
+    justify-content: space-between; /* Distribui os itens de maneira equidistante */
+}
+
+/* Estilo dos itens no slider */
+.producto-item {
+    width: calc(33.33% - 10px);  /* 3 itens por linha em telas menores */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid brown;
+    transition: all 0.3s ease;
+}
+
+/* Ajuste da imagem dentro do item */
+.producto-item img {
+    width: 100%;  /* Agora a imagem ocupará todo o espaço disponível */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilo das informações do produto */
+.producto-item .product-details {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Estilo do nome do produto */
+.producto-item .product-details .name {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Estilo do preço do produto */
+.producto-item .product-details .price {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
 
 .slider-container {
     position: relative;
     max-width: 100%;
     overflow: hidden;
+    margin-bottom: 85px;
 }
-
 
 .slider {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Permite que os itens que excedem o tamanho da linha se movam para a próxima */
     transition: transform 0.5s ease;
-    gap: 10px; 
+    gap: 10px; /* Espaçamento entre os itens */
+    justify-content: space-between; /* Distribui os itens de maneira equidistante */
 }
 
 .producto-item {
-    max-width: calc(20% - 10px); 
+    width: calc(20% - 10px);  /* Largura dos itens nas telas grandes */
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -25,40 +111,30 @@
 }
 
 .producto-item img {
-    width: 60%;  
-    height: auto; 
-    border-radius: 8px; 
-    margin-bottom: 10px;  
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
-
 
 .producto-item .product-details {
     padding: 10px;
-    background-color: #f4f4f4;  
+    background-color: #f4f4f4;
     border-radius: 8px;
     margin-top: 10px;
 }
 
-
 .producto-item .product-details .name {
     font-size: 16px;
-    color: #333; 
+    color: #333;
     font-weight: 600;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
-
 
 .producto-item .product-details .price {
     font-size: 18px;
-    color: #e74c3c;  
+    color: #e74c3c;
     font-weight: bold;
-}
-
-
-@media (max-width: 768px) {
-    .producto-item {
-        width: 50%; 
-    }
 }
 
 .prev, .next {
@@ -80,4 +156,25 @@
 
 .next {
     right: 10px;
+}
+
+
+
+/* Responsividade para telas pequenas (até 768px) */
+@media (max-width: 645px) {
+    .slider {
+        
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+    
+    }
+    .slider-container {
+       height: 400px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    
+    }
+    .producto-item {
+        width: calc(33.33% - 10px); /* 3 itens por linha */
+    }
 }

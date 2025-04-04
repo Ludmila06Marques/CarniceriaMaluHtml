@@ -1,33 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const fotos = document.querySelector('.slider .fotos');
-    const images = fotos.querySelectorAll('img');
-    const prevButton = document.querySelector('.slider .prev');
-    const nextButton = document.querySelector('.slider .next');
+document.addEventListener("DOMContentLoaded", () => {
+    const fotos = document.querySelector(".slider .fotos");
+    const images = Array.from(fotos.querySelectorAll("img"));
+    const prevButton = document.querySelector(".slider .prev");
+    const nextButton = document.querySelector(".slider .next");
 
-    const imagesPerPage = 4; 
-    const totalImages = images.length; 
-    let currentIndex = 0; 
+    let imagesPerPage = window.innerWidth <= 768 ? 2 : 4;
+    let totalImages = images.length;
+    let currentIndex = 0;
+
     function updateSlider() {
-      
-        const offset = currentIndex * 100 ; 
-        fotos.style.transform = `translateX(-${offset}%)`;
+        const imageWidth = images[0].clientWidth + 10; // Considera espaçamento (gap)
+        const offset = currentIndex * imageWidth;
+        fotos.style.transform = `translateX(-${offset}px)`;
     }
 
-    prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
+    function checkButtons() {
+        prevButton.style.display = currentIndex === 0 ? "none" : "block";
+        nextButton.style.display = currentIndex >= totalImages - imagesPerPage ? "none" : "block";
+    }
+
+    nextButton.addEventListener("click", () => {
+        if (currentIndex < totalImages - imagesPerPage) {
+            currentIndex++;
+            updateSlider();
+            checkButtons();
         }
-        updateSlider();
     });
 
-    nextButton.addEventListener('click', () => {
-      
-        if (currentIndex < Math.floor(totalImages / imagesPerPage) - 1) {
-            currentIndex++;
+    prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+            checkButtons();
         }
-        updateSlider();
     });
+
+    window.addEventListener("resize", () => {
+        imagesPerPage = window.innerWidth <= 768 ? 2 : 4;
+        updateSlider();
+        checkButtons();
+    });
+
+    updateSlider();
+    checkButtons();
 });
+
 
 document.getElementById("discountBubble").addEventListener("click", function() {
     document.getElementById("roletaPopup").style.display = "flex"; 

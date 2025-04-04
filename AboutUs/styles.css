@@ -32,13 +32,21 @@
 
 @media (max-width: 992px) {
     .contenido {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column-reverse; /* Esto invierte el orden para que las fotos vayan después del texto */
         text-align: center;
         padding: 0;
     }
 
-    .contenido img,
+    .contenido img {
+        width: 100%;
+        height: auto; /* Asegura que las imágenes mantengan su proporción */
+        margin-bottom: 20px; /* Espaciado entre la imagen y el texto */
+    }
+
     .contenido p {
         width: 100%;
+        margin: 0 0 20px 0; /* Espaciado entre el párrafo y la siguiente imagen */
     }
 }
+

@@ -5,27 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Carnicería Malu</title>
     <link rel="stylesheet" href="../reset.css"> 
-    <link rel="stylesheet" href="../global.css"> 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../global.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-     <header>
-        <nav>
+    <header>
+        <nav id="desktop">
             <ul>
-                <li><a  href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
-                <li><span>Carnicería Malu</span></li>
-              <li><a href="../Home/index.html">Inicio</a></li>
+                <li><a href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
+               <li><h1><strong>Carnicería Malu</strong></h1></li>
+                <li><a href="../Home/index.html">Inicio</a></li>
                 <li><a href="../AboutUs/aboutUs.html">Sobre Nosotros</a></li>
                 <li><a href="../Products/products.html">Productos</a></li>
                 <li><a href="../Services/services.html">Servicios</a></li>
-                <li><a href="../Contact/contact.html">Contacto</a></li>
+                <li><a href="../Contact/contact.html">Contacto y ubicación</a></li>
+            </ul>
+        </nav>
+        <nav id="mobile">
+            <ul>
+               
+           
+                <button id="menuToggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+               <li><h1><strong>Carnicería Malu</strong></h1></li>
+                <li><a href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
+              
+            
             </ul>
         </nav>
     </header>
 
+    <aside id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="close-menu"><i class="fas fa-times"></i></button>
+        <nav>
+            <ul>
+                <li><a href="../Home/index.html">Inicio</a></li>
+                <li><a href="../AboutUs/aboutUs.html">Sobre Nosotros</a></li>
+                <li><a href="../Products/products.html">Productos</a></li>
+                <li><a href="../Services/services.html">Servicios</a></li>
+                <li><a href="../Contact/contact.html">Contacto y ubicación</a></li>
+            </ul>
+        </nav>
+    </aside>
+
     <section>
-        <h1>Nuestros Servicios</h1>
+        <h1><strong>Nuestros Servicios</strong></h1>
         <div class="servicios-grid">
             <div class="servicio">
                 <a href="https://wa.me/34651374252?text=Estoy%20interesado%20en%20el%20servicio%20a%20domicilio%20de%20Carnicería%20Malu." target="_blank">
@@ -77,16 +101,33 @@
     
 
 
+    
     <footer>
-
-        <div class="social">
-            <i class="fab fa-whatsapp"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fas fa-phone"></i>
-            
+        <div class="footer-container">
+              <div class="social">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/34651374252" target="_blank" aria-label="Enviar mensaje por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+    
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/carniceriamalu/" target="_blank" aria-label="Ver perfil en Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+    
+            <!-- Llamar -->
+            <a href="tel:+34651374252" aria-label="Llamar por teléfono">
+                <i class="fas fa-phone"></i>
+            </a>
         </div>
+        <!-- Endereço -->
+        <div class="address">
+            <p>Plaza do Rei, 20, Lugo - Galicia, España</p>
+        </div>
+        </div>
+      
     </footer>
-     <!-- Adicionar EmailJS Script -->
-  
+ 
+  <script src="../js/headerComport.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     const slider = document.querySelector('.slider');
+  
     
     const produtos = [
         { nome: "Producto 1", preco: "$15.99", img: "../img/carniceriafoto2.jpg" },
@@ -23,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     let currentIndex = 0;
-    const itemsPerPage = 10;  
     const totalItems = produtos.length;
 
 
     function renderProducts() {
+        const itemsPerPage = getItemsPerPage(); // <- aqui dentro!
         slider.innerHTML = ''; 
     
         const startIndex = currentIndex * itemsPerPage;
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     
+    
 
 
     function moveSlider() {
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     nextButton.addEventListener('click', () => {
+        const itemsPerPage = getItemsPerPage();
         if (currentIndex < Math.ceil(totalItems / itemsPerPage) - 1) {
             currentIndex++;
         } else {
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     prevButton.addEventListener('click', () => {
+        const itemsPerPage = getItemsPerPage();
         if (currentIndex > 0) {
             currentIndex--;
         } else {
@@ -78,3 +82,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     moveSlider();
 });
+function getItemsPerPage() {
+    const width = window.innerWidth;
+
+    if (width <= 768) {
+        return 3; // mobile
+    } else if (width <= 992) {
+        return 9; // tablet
+    } else {
+        return 10; // desktop
+    }
+}

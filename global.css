@@ -1,17 +1,26 @@
-/* Fuentes */
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+
 body {
- 
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-
+    background: linear-gradient(to bottom, #e0e0e0, #FFCDD2); 
+    background-attachment: fixed;
     background-color: #f4f4f4;
+    background-size: cover;  
+    background-position: center; 
 }
 
 /* Fuentes principales */
 h1 {
     font-family: 'Slabo 27px', serif;
-    font-size: 42px;
+    font-size: 50px;
     color: #d32f2f; 
 }
 
@@ -26,11 +35,20 @@ h3 {
     font-size: 26px;
     color: #333;
 }
-
+h4 {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    color: #333;
+}
 p {
     font-family: 'Lora', serif;
     font-size: 16px;
     color: #666;
+}
+span {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    color: white;
 }
 a{
 font-weight: bold;
@@ -38,6 +56,7 @@ font-weight: bold;
 
 /* Estilo del Header */
 header {
+    /* padding: 0px 50px 0px 50px; */
     background-color: #F9ECDA;
     margin-bottom: 16px;
 }
@@ -59,13 +78,13 @@ header nav li img {
 
 header nav li span {
     font-family: 'Slabo 27px', serif;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #d32f2f;
 }
 
 header nav a {
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     text-decoration: none;
     padding: 8px 16px;
@@ -76,7 +95,7 @@ header nav a:hover {
     color: #d32f2f;
 }
 section {
-    background: linear-gradient(to bottom,#e0e0e0, #FFCDD2); 
+ 
     padding: 32px 16px;
     color: #333;
     text-align: center;
@@ -92,7 +111,11 @@ button, .social i {
 }
 
 footer {
-    background-color: #333;
+    position: fixed;
+    width: 100%;
+    min-height: 80px;
+    bottom: 0;
+    background-color: #D32F2F;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,6 +142,153 @@ footer .social i:hover {
     color: #e53935; 
     transform: scale(1.1);
 }
+footer .address {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+
+footer .address p {
+    margin: 0;
+    color: #ffffff;
+}
+
 strong {
     font-weight: bold; 
+}
+
+#menuToggle :hover {
+    background-color: #d32f2f;
+}
+ #menuToggle {
+    margin-left: 10px;
+    background-color: #c62828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Menu lateral */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #D32F2F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+}
+
+/* Links dentro do menu */
+.mobile-menu nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu nav ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.mobile-menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.mobile-menu nav ul li a:hover {
+    background: #F9ECDA;
+}
+
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #C62828;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+}
+
+/* Links dentro do menu */
+.mobile-menu nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu nav ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.mobile-menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.mobile-menu nav ul li a:hover {
+    background: #C62828;
+}
+
+.mobile-menu.open {
+    left: 0;
+}
+
+.mobile-menu.open {
+    left: 0;
+}
+#mobile{
+    display: none;
+ }
+/* Responsividade */
+@media (max-width: 768px) {
+     #desktop{
+        display: none;
+     }
+     .menuToggle{
+        display: block;
+     }
+     #mobileMenu{
+     z-index: 99999;
+     }
+     #mobile{
+        display: block;
+  
+     }
+     h1{
+        font-size: 25px;
+    }
+    footer{
+    
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
 }

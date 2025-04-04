@@ -5,65 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - Carnicería Malu</title>
     <link rel="stylesheet" href="../reset.css"> 
+    <link rel="stylesheet" href="styles.css"> 
     <link rel="stylesheet" href="../global.css"> 
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-     <header>
-        <nav>
+    <header>
+        <nav id="desktop">
             <ul>
                 <li><a href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
-                <li><span>Carnicería Malu</span></li>
-              <li><a href="../Home/index.html">Inicio</a></li>
+               <li><h1><strong>Carnicería Malu</strong></h1></li>
+                <li><a href="../Home/index.html">Inicio</a></li>
                 <li><a href="../AboutUs/aboutUs.html">Sobre Nosotros</a></li>
                 <li><a href="../Products/products.html">Productos</a></li>
                 <li><a href="../Services/services.html">Servicios</a></li>
-                <li><a href="../Contact/contact.html">Contacto</a></li>
+                <li><a href="../Contact/contact.html">Contacto y ubicación</a></li>
+            </ul>
+        </nav>
+        <nav id="mobile">
+            <ul>
+               
+           
+                <button id="menuToggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+               <li><h1><strong>Carnicería Malu</strong></h1></li>
+                <li><a href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
+              
+            
             </ul>
         </nav>
     </header>
 
+    <aside id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="close-menu"><i class="fas fa-times"></i></button>
+        <nav>
+            <ul>
+                <li><a href="../Home/index.html">Inicio</a></li>
+                <li><a href="../AboutUs/aboutUs.html">Sobre Nosotros</a></li>
+                <li><a href="../Products/products.html">Productos</a></li>
+                <li><a href="../Services/services.html">Servicios</a></li>
+                <li><a href="../Contact/contact.html">Contacto y ubicación</a></li>
+            </ul>
+        </nav>
+    </aside>
+
     <section>
-        <h1>Sobre Nosotros</h1>
+        <h1><strong>Sobre Nosotros</strong></h1>
     
         <div class="contenido">
             <img src="../img/carniceriafoto8.jpg" alt="Nuestra carnicería">
-            <p>
+            <h3>
                 Carnicería Malu nace del <strong>esfuerzo</strong>, la <strong>pasión</strong> y la <strong>experiencia</strong>. Malu, nuestra fundadora, dedicó <strong>18 años</strong> de su vida a la ganadería, trabajando directamente con animales y aprendiendo desde dentro cómo garantizar la mejor calidad de la carne. Aunque disfrutaba de su trabajo en el campo, descubrió que su verdadera vocación estaba detrás del mostrador, cortando, preparando y asesorando a cada cliente con <strong>dedicación</strong>.
                 <br><br>
                 Durante <strong>6 años</strong> trabajó como carnicera en distintas carnicerías, perfeccionando su técnica y cultivando el trato cercano que tanto valora hoy en día. Con <strong>esfuerzo</strong> y <strong>amor</strong> por su oficio, decidió dar el paso y abrir su propio negocio, donde pudiera controlar cada detalle, desde el origen del producto hasta la sonrisa del cliente al marcharse.
-            </p>
+            </h3>
         </div>
     
         <div class="contenido">
-            <p>
+            <h3>
                 Lo que diferencia a Carnicería Malu es que aquí no vendemos carne cualquiera: vendemos carne de <strong>confianza</strong>. Los terneros provienen de su propia ganadería, criados con <strong>mimo</strong>, <strong>respeto</strong> y en condiciones óptimas. Malu conoce personalmente el origen de cada pieza que llega al mostrador, y eso se nota en el <strong>sabor</strong>, en la <strong>textura</strong> y en la tranquilidad que ofrecemos a nuestros clientes.
                 <br><br>
                 Porque aquí no solo vendemos carne: compartimos <strong>tradición</strong>, <strong>honestidad</strong> y el orgullo de hacer las cosas bien. Si buscas calidad, trato cercano y productos en los que puedas confiar, estás en el lugar adecuado. Ven a conocernos y descubre por qué cada corte en Carnicería Malu tiene <strong>historia</strong>, <strong>corazón</strong> y <strong>sabor auténtico</strong>.
-            </p>
+            </h3>
             <img src="../img/carniceriafoto5.jpg" alt="Nuestra carnicería">
         </div>
     </section>
     
     
-    <footer>
-        <div class="social">
-            <!-- WhatsApp -->
-            <a href="https://wa.me/34651374252" target="_blank" aria-label="Enviar mensaje por WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-    
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/carniceriamalu/" target="_blank" aria-label="Ver perfil en Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-    
-            <!-- Llamar -->
-            <a href="tel:+34651374252" aria-label="Llamar por teléfono">
-                <i class="fas fa-phone"></i>
-            </a>
-        </div>
-    </footer>
+<footer>
+    <div class="footer-container">
+          <div class="social">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/34651374252" target="_blank" aria-label="Enviar mensaje por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/carniceriamalu/" target="_blank" aria-label="Ver perfil en Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- Llamar -->
+        <a href="tel:+34651374252" aria-label="Llamar por teléfono">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+    <!-- Endereço -->
+    <div class="address">
+        <p>Plaza do Rei, 20, Lugo - Galicia, España</p>
+    </div>
+    </div>
+  
+</footer>
+
+    <script src="../js/headerComport.js"></script>
 </body>
 </html>

@@ -7,47 +7,66 @@
     <link rel="stylesheet" href="../reset.css"> 
     <link rel="stylesheet" href="styles.css"> 
     <link rel="stylesheet" href="../global.css"> 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="desktop">
             <ul>
                 <li><a href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
-                <li><span>Carnicería Malu</span></li>
+                <li><h1><strong>Carnicería Malu</strong></h1></li>
                 <li><a href="../Home/index.html">Inicio</a></li>
                 <li><a href="../AboutUs/aboutUs.html">Sobre Nosotros</a></li>
                 <li><a href="../Products/products.html">Productos</a></li>
                 <li><a href="../Services/services.html">Servicios</a></li>
-                <li><a href="../Contact/contact.html">Contacto</a></li>
+                <li><a href="../Contact/contact.html">Contacto y ubicación</a></li>
+            </ul>
+        </nav>
+        <nav id="mobile">
+            <ul>
+               
+           
+                <button id="menuToggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+               <li><h1><strong>Carnicería Malu</strong></h1></li>
+                <li><a href="../Home/index.html"><img src="../img/LogoMalu.png" alt="Logo Carnicería Malu"></a></li>
+              
+            
             </ul>
         </nav>
     </header>
-    
-   
-    <section>
-        <h1> Bienvenidos a Carnicería Malu</h1>
-        
-        <!-- Bolinha pulsante no canto superior direito -->
-        <div id="discountBubble" class="discount-bubble">
-            <span>Conseguir Descuento</span>
-        </div>
 
-        <!-- Popup da roleta (inicialmente escondido) -->
+    <aside id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="close-menu"><i class="fas fa-times"></i></button>
+        <nav>
+            <ul>
+                <li><a href="../Home/index.html">Inicio</a></li>
+                <li><a href="../AboutUs/aboutUs.html">Sobre Nosotros</a></li>
+                <li><a href="../Products/products.html">Productos</a></li>
+                <li><a href="../Services/services.html">Servicios</a></li>
+                <li><a href="../Contact/contact.html">Contacto y ubicación</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section>
+        
+        <h1><strong>Bienvenidos a Carnicería Malu</strong></h1>
+
+        <!-- Bolha de desconto -->
+       
+
+        <!-- Popup da roleta de desconto -->
         <div id="roletaPopup" class="popup" style="display: none;">
             <div class="popup-content">
-             
-                <h2>Ruleta de la suerte!</h2>
+                <h1>Ruleta de la suerte!</h1>
                 <button id="spinButton" style="display: none;">Girar!</button>
-                <!-- Formulário de e-mail dentro do popup -->
                 <div id="emailFormContainer" class="email-container">
-                    <label for="userEmail">Inserte su email para obtener el descuento:</label>
-                    <input type="email" id="userEmail" placeholder="Correo electrónico">
+                    <h3 for="userEmail">Inserte su email para obtener el descuento:</h3>
+                    <input required type="email" id="userEmail" placeholder="Correo electrónico">
                     <button id="submitEmail">Enviar</button>
                     <p id="emailStatus" style="display: none; color: red;">Ya has jugado este mes. Vuelve el próximo mes.</p>
                 </div>
-
-                <!-- A roleta aparecerá somente após o e-mail ser enviado -->
                 <div class="roleta" style="display: none;">
                     <div class="roleta-item" data-discount="2%">2%</div>
                     <div class="roleta-item" data-discount="5%">5%</div>
@@ -55,13 +74,14 @@
                     <div class="roleta-item" data-discount="10%">10%</div>
                     <div class="roleta-item" data-discount="15%">15%</div>
                 </div>
-               
                 <p id="prize" style="display: none;"></p>
                 <button id="closePopup">Cerrar</button>
             </div>
         </div>
 
-        <div class="slider">
+        <!-- Slider de imagens -->
+         <div class="container" >
+           <div class="slider">
             <button class="prev">&lt;</button>
             <div class="fotos">
                 <img src="../img/carniceriafoto2.jpg" alt="Foto 2">
@@ -75,26 +95,45 @@
             </div>
             <button class="next">&gt;</button>
         </div>
+        <div id="discountBubble" class="discount-bubble">
+            <span>Conseguir Descuento</span>
+        </div> 
+         </div>
         
-     
     </section>
 
+    
     <footer>
-        <div class="social">
+        <div class="footer-container">
+              <div class="social">
+            <!-- WhatsApp -->
             <a href="https://wa.me/34651374252" target="_blank" aria-label="Enviar mensaje por WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
+    
+            <!-- Instagram -->
             <a href="https://www.instagram.com/carniceriamalu/" target="_blank" aria-label="Ver perfil en Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
+    
+            <!-- Llamar -->
             <a href="tel:+34651374252" aria-label="Llamar por teléfono">
                 <i class="fas fa-phone"></i>
             </a>
         </div>
+        <!-- Endereço -->
+        <div class="address">
+            <p>Plaza do Rei, 20, Lugo - Galicia, España</p>
+        </div>
+        </div>
+      
     </footer>
 
+    <!-- Scripts -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+   
     <script src="../js/emailService.js"></script>
+    <script src="../js/headerComport.js"></script>
     <script src="../js/home.js"></script>
 </body>
 </html>

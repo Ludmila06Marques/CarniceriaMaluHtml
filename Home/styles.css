@@ -1,57 +1,16 @@
 
 
-
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-
-.slider .fotos {
+.container{
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    gap: 20px; 
-    box-sizing: border-box;
-    padding: 0 10px; 
-}
-.slider img {
-    width: calc(25% - 15px); 
-    height: 400px;
-    object-fit: cover;
-    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.slider button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 12px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.slider button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.slider .prev {
-    left: 16px;
-}
-
-.slider .next {
-    right: 16px;
-}
 
 .discount-bubble {
-    position: fixed;
-    top: 80px;
-    right: 20px;
+    margin-top: 15px;
+    width: 200px;
     background-color: #c62828;
     color: white;
     border-radius: 50%;
@@ -104,14 +63,14 @@
     text-align: center;
     width: 80%;
     max-width: 500px;
+ 
 }
 
 .popup-content h2 {
     margin-bottom: 20px;
 }
 
-.popup-content button {
-
+.popup-content  button {
     width: 100px;
     height: 40px;
     background-color: #c62828;
@@ -121,9 +80,6 @@
     cursor: pointer;
 }
 
-.popup-content button:hover {
-    background-color: #d32f2f;
-}
 
 #spinButton {
     background-color: #c62828;
@@ -293,4 +249,117 @@
 
 #emailStatus {
     animation: fadeIn 0.5s ease-in-out;
+}/* Botão de menu no mobile */
+/* .menu-toggle {
+    position: fixed;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+} */
+
+
+
+/* Responsividad */
+
+/* Ocultar o botão de menu no desktop */
+/* .menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+} */
+
+
+
+/* Botão para fechar o menu */
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
+
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
+.slider .fotos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px; 
+    box-sizing: border-box;
+    padding: 0 10px; 
+    
+}
+
+.slider img {
+    width: calc(25% - 15px); /* Para desktop, 4 imagens por vez */
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider .prev {
+    z-index: 10;
+    left: 16px;
+}
+
+.slider .next {
+    right: 16px;
+}
+
+@media (max-width: 768px) {
+    .slider .fotos {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 10px; 
+     
+    }
+    .discount-bubble{
+        margin-top: 0px;
+        z-index: 5;
+    }
+ 
+    .slider img {
+        width: calc(50% - 10px); 
+        height: auto; 
+      
+    }
+    .slider{
+        margin-bottom: 40px;
+    }
+}
+
