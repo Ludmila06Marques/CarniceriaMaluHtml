@@ -10,18 +10,19 @@
 
 .discount-bubble {
     margin-top: 15px;
-    width: 200px;
+    margin-bottom: 100px;
+    width: 150px;
+    padding: 15px;
+    font-size: 12px;
     background-color: #c62828;
     color: white;
     border-radius: 50%;
-    padding: 20px;
     cursor: pointer;
-    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: pulse 1.5s infinite;
-    z-index: 9999;
+    z-index: 99;
 }
 
 .discount-bubble:hover {
@@ -310,11 +311,11 @@
 }
 
 .slider img {
-    width: calc(25% - 15px); /* Para desktop, 4 imagens por vez */
-    height: 400px;
+    width: calc(25% - 15px);
+    max-height: 250px;
     object-fit: cover;
-    flex-shrink: 0;
 }
+
 
 .slider button {
     position: absolute;
