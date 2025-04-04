@@ -21,23 +21,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 window.addEventListener("DOMContentLoaded", (event) => {
-  let activeLink = null;
+    let activeLink = null;
+  
+    const links = document.querySelectorAll("nav a");
+  
+    links.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault(); 
+  
 
-  const links = document.querySelectorAll("nav a");
+        if (activeLink) {
+          activeLink.classList.remove("active");
+        }
+  
+        if (!link.querySelector("img")) {
+          link.classList.add("active");
+        }
 
-  links.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-
-      if (activeLink) {
-        activeLink.classList.remove("active");
-      }
-
-      if (!link.querySelector("img")) {
-        link.classList.add("active");
-      }
-
-      activeLink = link;
+        activeLink = link;
+  
+ 
+        window.location.href = link.href;
+      });
     });
   });
-});
+  
