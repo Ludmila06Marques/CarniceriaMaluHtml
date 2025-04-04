@@ -12,7 +12,7 @@ body {
 h1 {
     font-family: 'Slabo 27px', serif;
     font-size: 42px;
-    color: #d32f2f; /* Rojo principal de la paleta */
+    color: #d32f2f; 
 }
 
 h2 {
@@ -61,7 +61,7 @@ header nav li span {
     font-family: 'Slabo 27px', serif;
     font-size: 24px;
     font-weight: bold;
-    color: #d32f2f; /* Rojo de la paleta */
+    color: #d32f2f;
 }
 
 header nav a {
@@ -107,8 +107,8 @@ footer .social {
 
 footer .social i {
     font-size: 32px;
-    line-height: 1; /* evita que o ícone estique verticalmente */
-    display: inline-flex; /* garante controle sobre altura/alinhamento */
+    line-height: 1; 
+    display: inline-flex; 
     align-items: center;
     justify-content: center;
     color: #ffffff;
@@ -116,9 +116,9 @@ footer .social i {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 footer .social i:hover {
-    color: #e53935; /* vermelho mais claro no hover */
+    color: #e53935; 
     transform: scale(1.1);
 }
 strong {
-    font-weight: bold; /* Garante que o texto dentro do <strong> fique em negrito */
+    font-weight: bold; 
 }

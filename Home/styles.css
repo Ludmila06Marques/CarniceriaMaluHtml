@@ -1,6 +1,6 @@
 
 
-/* Estilos para el Slider */
+
 .slider {
     position: relative;
     width: 100%;
@@ -12,12 +12,12 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
-    gap: 20px; /* Espaçamento entre as imagens */
+    gap: 20px; 
     box-sizing: border-box;
-    padding: 0 10px; /* Padding interno se quiser espaço nos lados */
+    padding: 0 10px; 
 }
 .slider img {
-    width: calc(25% - 15px); /* Subtrai parte do gap para manter 4 por linha */
+    width: calc(25% - 15px); 
     height: 400px;
     object-fit: cover;
     flex-shrink: 0;
@@ -48,8 +48,6 @@
     right: 16px;
 }
 
-/* Fondo Gradiente en la Sección */
-/* Estilos para a bolinha pulsante */
 .discount-bubble {
     position: fixed;
     top: 80px;
@@ -63,7 +61,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: pulse 1.5s infinite; /* Efeito pulsante */
+    animation: pulse 1.5s infinite;
     z-index: 9999;
 }
 
@@ -71,7 +69,6 @@
     background-color: #d32f2f;
 }
 
-/* Animação para pulsar */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -84,14 +81,13 @@
     }
 }
 
-/* Estilos para o popup */
 .popup {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,9 +135,6 @@
     text-align: center;
 }
 
-
-
-/* Estilo da roleta */
 .roleta {
     display: flex;
     justify-content: center;
@@ -153,12 +146,12 @@
     border: 5px solid #c62828;
     overflow: hidden;
     margin: 20px auto;
-    transition: transform 3s ease-out; /* Transição para rotação suave */
-    pointer-events: auto; /* Para permitir interação enquanto gira */
-    background: linear-gradient(135deg, #ff6b6b, #f06595, #fc8f19); /* Gradiente colorido de fundo */
+    transition: transform 3s ease-out; 
+    pointer-events: auto; 
+    background: linear-gradient(135deg, #ff6b6b, #f06595, #fc8f19); 
 }
 
-/* Itens da roleta */
+
 .roleta-item {
     position: absolute;
     width: 70px;
@@ -177,41 +170,41 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efeito de hover para os itens da roleta */
+
 .roleta-item:hover {
-    background-color: #ff6b6b; /* Fica vermelho ao passar o mouse */
-    color: white; /* Texto em branco */
-    transform: scale(1.1); /* Aumenta ligeiramente o tamanho do item */
+    background-color: #ff6b6b; 
+    color: white; 
+    transform: scale(1.1); 
 }
 
-/* Definindo cores vibrantes para cada item */
+
 .roleta-item:nth-child(1) {
-    background-color: #ff6b6b; /* Vermelho */
+    background-color: #ff6b6b; 
     color: #fff;
-    transform: rotate(0deg) translate(90px) rotate(0deg); /* Posição inicial */
+    transform: rotate(0deg) translate(90px) rotate(0deg); 
 }
 .roleta-item:nth-child(2) {
-    background-color: #f06595; /* Rosa */
+    background-color: #f06595;
     color: #fff;
-    transform: rotate(72deg) translate(90px) rotate(-72deg); /* Posição 2 */
+    transform: rotate(72deg) translate(90px) rotate(-72deg);
 }
 .roleta-item:nth-child(3) {
-    background-color: #fc8f19; /* Laranja */
+    background-color: #fc8f19; 
     color: #fff;
-    transform: rotate(144deg) translate(90px) rotate(-144deg); /* Posição 3 */
+    transform: rotate(144deg) translate(90px) rotate(-144deg);
 }
 .roleta-item:nth-child(4) {
-    background-color: #ffeb3b; /* Amarelo */
+    background-color: #ffeb3b; 
     color: #333;
-    transform: rotate(216deg) translate(90px) rotate(-216deg); /* Posição 4 */
+    transform: rotate(216deg) translate(90px) rotate(-216deg); 
 }
 .roleta-item:nth-child(5) {
-    background-color: #4caf50; /* Verde */
+    background-color: #4caf50; 
     color: #fff;
-    transform: rotate(288deg) translate(90px) rotate(-288deg); /* Posição 5 */
+    transform: rotate(288deg) translate(90px) rotate(-288deg);
 }
 
-/* Adicionando animações para quando a roleta gira */
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -222,7 +215,7 @@
     background-color: #d32f2f;
 }
 
-/* Estilo para o prêmio */
+
 #prize {
     margin-top: 20px;
     font-size: 18px;
@@ -231,11 +224,11 @@
     display: none;
 }
 
-/* Efeito de pulsação para o botão */
+
 #spinButton:active {
     transform: scale(0.95);
 }
-/* Formulário de E-mail */
+
 .email-container {
     text-align: center;
     padding: 20px;
@@ -244,7 +237,6 @@
 .email-container label {
     font-size: 18px;
     margin-bottom: 10px;
-    /* display: block; */
     color: #333;
 }
 
@@ -256,7 +248,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; /* Faz com que o padding não afete a largura total */
+    box-sizing: border-box; 
 }
 
 .email-container button {
@@ -280,7 +272,6 @@
     margin-top: 10px;
 }
 
-/* Estilo para o status de já ter jogado */
 #emailStatus {
     font-size: 16px;
     color: red;
@@ -288,18 +279,18 @@
     margin-top: 20px;
 }
 
-/* Ajustes para o botão de "Enviar" */
+
 #submitEmail {
     margin-top: 15px;
 }
 
-/* Exemplo de animação para mostrar a resposta de erro */
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-/* Quando o status de erro aparecer, anima para aumentar a visibilidade */
+
 #emailStatus {
     animation: fadeIn 0.5s ease-in-out;
 }

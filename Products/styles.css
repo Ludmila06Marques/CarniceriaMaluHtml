@@ -1,20 +1,20 @@
-/* Contêiner do slider */
+
 .slider-container {
     position: relative;
     max-width: 100%;
     overflow: hidden;
 }
 
-/* Slider com todos os produtos */
+
 .slider {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap; 
     transition: transform 0.5s ease;
-    gap: 10px; /* Espaçamento entre produtos */
+    gap: 10px; 
 }
-/* Contêiner do item do produto */
+
 .producto-item {
-    max-width: calc(20% - 10px); /* Compensa o espaço do gap para manter 5 por linha */
+    max-width: calc(20% - 10px); 
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -24,46 +24,43 @@
     border: 1px solid brown;
 }
 
-/* Estilo da imagem dentro do item do produto */
 .producto-item img {
-    width: 60%;  /* Imagem ocupa 100% da largura do item */
-    height: auto;  /* Mantém a proporção */
-    border-radius: 8px;  /* Bordas arredondadas para a imagem */
-    margin-bottom: 10px;  /* Espaço abaixo da imagem */
+    width: 60%;  
+    height: auto; 
+    border-radius: 8px; 
+    margin-bottom: 10px;  
 }
 
-/* Contêiner do nome do produto e preço */
+
 .producto-item .product-details {
     padding: 10px;
-    background-color: #f4f4f4;  /* Fundo suave para destacar o nome e preço */
+    background-color: #f4f4f4;  
     border-radius: 8px;
     margin-top: 10px;
 }
 
-/* Nome do produto */
+
 .producto-item .product-details .name {
     font-size: 16px;
-    color: #333;  /* Cor do nome do produto */
+    color: #333; 
     font-weight: 600;
-    margin-bottom: 5px; /* Espaço entre o nome e o preço */
+    margin-bottom: 5px; 
 }
 
-/* Preço do produto */
+
 .producto-item .product-details .price {
     font-size: 18px;
-    color: #e74c3c;  /* Cor vermelha para destacar o preço */
+    color: #e74c3c;  
     font-weight: bold;
 }
 
-/* Responsividade para telas menores */
+
 @media (max-width: 768px) {
     .producto-item {
-        width: 50%;  /* 2 produtos por linha em telas menores */
+        width: 50%; 
     }
 }
 
-
-/* Botões de navegação do slider */
 .prev, .next {
     position: absolute;
     top: 50%;

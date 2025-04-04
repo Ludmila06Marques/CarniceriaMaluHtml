@@ -23,16 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     let currentIndex = 0;
-    const itemsPerPage = 10;  // 10 produtos por vez
+    const itemsPerPage = 10;  
     const totalItems = produtos.length;
 
-    // Função para gerar os produtos na tela
+
     function renderProducts() {
-        slider.innerHTML = ''; // Limpa o slider
+        slider.innerHTML = ''; 
     
         const startIndex = currentIndex * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
-        const visibleProducts = produtos.slice(startIndex, endIndex); // Pegando os produtos da página atual
+        const visibleProducts = produtos.slice(startIndex, endIndex); 
     
         visibleProducts.forEach(product => {
             const productDiv = document.createElement('div');
@@ -51,31 +51,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 
-    // Função para mover o slider
+
     function moveSlider() {
-        renderProducts();  // Atualiza os produtos visíveis
+        renderProducts();  
     }
 
-    // Lógica do botão "next"
+
     nextButton.addEventListener('click', () => {
         if (currentIndex < Math.ceil(totalItems / itemsPerPage) - 1) {
             currentIndex++;
         } else {
-            currentIndex = 0; // Voltar ao início
+            currentIndex = 0;
         }
         moveSlider();
     });
 
-    // Lógica do botão "prev"
+
     prevButton.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
         } else {
-            currentIndex = Math.ceil(totalItems / itemsPerPage) - 1; // Vai para o final
+            currentIndex = Math.ceil(totalItems / itemsPerPage) - 1; 
         }
         moveSlider();
     });
 
-    // Inicializa a renderização
     moveSlider();
 });
